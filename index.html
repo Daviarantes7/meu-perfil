@@ -48,10 +48,8 @@ h1{margin:0 0 6px;font-size:clamp(2rem,8vw,3rem);letter-spacing:-.03em;text-tran
   <section class="panel" id="local"><p class="big" id="localTxt"></p></section>
 
   <div class="socials">
-    <a href="https://github.com/daviarantes7" id="github" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.56.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.52 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.29-2.61 5.24-5.1 5.51.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>GitHub</a>
     <a href="#" id="ig" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5ZM17.3 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z"/></svg>Instagram</a>
     <a href="#" id="tt" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.2a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.4a5.8 5.8 0 1 0 5 5.7V8.6a7.200 7.200 0 0 0 4.200 1.400V6.800A4.200 4.200 0 0 1 16.600 2Z"/></svg>TikTok</a>
-    <a href="#" id="yt" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.600 7.200a2.500 2.500 0 0 0-1.800-1.800C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.500 2.500 0 0 0 2.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800ZM10 15V9l5.200 3Z"/></svg>YouTube</a>
   </div>
 </main>
 
@@ -62,13 +60,10 @@ const perfil = {
   idade: "21 anos",
   local: "São Paulo, SP",
   jogos: ["💻 Jogo no PC", "Valorant", "CS", "Minecraft", "Elden Ring", "Todos os Soulslike", "E vários outros"],
-  github: "https://github.com/daviarantes7",
   instagram: "https://instagram.com/Daviikkjj7",
-  tiktok: "https://tiktok.com/@meiodiaaaa",
-  youtube: ""
+  tiktok: "https://tiktok.com/@meiodiaaaa"
 };
 
-document.getElementById("github").href = perfil.github;
 document.getElementById("nome").textContent = perfil.nome;
 document.getElementById("idadeTxt").textContent = perfil.idade;
 document.getElementById("localTxt").textContent = perfil.local;
@@ -76,7 +71,6 @@ document.getElementById("chips").innerHTML = perfil.jogos.map(j => '<span class=
 document.querySelectorAll(".chip").forEach((el, i) => el.textContent = perfil.jogos[i]);
 document.getElementById("ig").href = perfil.instagram;
 document.getElementById("tt").href = perfil.tiktok;
-if (perfil.youtube) document.getElementById("yt").href = perfil.youtube; else document.getElementById("yt").remove();
 
 document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
   document.querySelectorAll(".tab,.panel").forEach(e => e.classList.remove("on"));
